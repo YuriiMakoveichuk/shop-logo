@@ -64,6 +64,10 @@
   .polo-img {
     width: 15px;
     height: 15px;
+    background-image: url(images/arrow.svg);
+    position: absolute;
+    right: 5px;
+    top: 20px;
   }
   
   .menu-products {
@@ -229,10 +233,13 @@
   .sort:hover .sort-table {
     display: block;
   }
-  .soft-img {
+  .sort-img {
     width: 15px;
     height: 15px;
-    margin-left: 108px;
+    background-image: url(images/arrow-white.svg);
+    right: 15px;
+    top: 12px;
+    position: absolute;
   }
   .prod {
     display: flex;
@@ -360,5 +367,15 @@
     font-size: 21px;
     font-weight: bold;
     background-repeat: no-repeat;
+    position: relative;
+  }
+  .price-img {
+    width: 20px;
+    height: 20px;
+    background-image: url(images/basket-white.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 5px;
+    top: 15px;
   }
   
