@@ -215,6 +215,10 @@
     font-size: 21px;
     font-weight: bold;
   }
+  .device-sumbit:hover {
+    background-color: white;
+    color: #2c71b8;
+  } 
 
   .col-9 {
     max-width: 75%;
@@ -388,6 +392,10 @@
     font-size: 21px;
     font-weight: bold;
   }
+  .price-btn:hover {
+   background-color: white;
+   color: #568dc6;
+  }
   .price-btn1 {
     width: 210px;
     height: 48px;
@@ -402,6 +410,10 @@
     background-repeat: no-repeat;
     position: relative;
   }
+  .price-btn1:hover {
+    background-color: white;
+    color: #568dc6;
+   }
   .price-img {
     width: 20px;
     height: 20px;
@@ -412,3 +424,42 @@
     top: 15px;
   }
   
+
+  .form-auth {
+    display: none;
+    width: 200px;
+    height: 180px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+}
+.form-field {
+    margin-bottom: 10px;
+}
+.form-field input {
+    width: 100%;
+    padding: 5px; 
+}
+.btn-submit {
+    width: 100%;
+    background-color: blue;
+    color:white;
+    border:none;
+    height: 25px;
+    border-radius: 4px;
+}
+
+.btn-close {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image:url(images/close.svg);
+    margin-bottom: 10px;
+    margin-left: 140px;
+}

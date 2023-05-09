@@ -16,6 +16,7 @@
   </head>
   <body>
     <header class="header">
+    
       <div class="conteiner">
         <div class="row">
           <div class="col-3">
@@ -60,7 +61,7 @@
 
                 <div
                   class="basket">
-                    <div class="four">4</div>
+                    <div class="four" id="products-count">0</div>
                
                 </div>
               </div>
@@ -83,40 +84,88 @@
             <div class="device">
               <div class="device-type">
                 <h>DEVICE TYPE</h>
-                <li > <input type="checkbox" class="device-checkbox-input" id="laptop" >
-                <label for="laptop" class="device-checkbox-label"><span>Laptop</span></label></li>
-                <li>   <input type="checkbox" class="device-checkbox-input" id="tablet">
-                  <label for="tablet" class="device-checkbox-label"><span>Tablet</span></label></li>
+                <li >
+                   <input type="checkbox" class="device-checkbox-input" id="laptop" >
+                   <label for="laptop" class="device-checkbox-label">
+                     <span>Laptop</span>
+                   </label>
+                </li>
+                <li> 
+                    <input type="checkbox" class="device-checkbox-input" id="tablet">
+                    <label for="tablet" class="device-checkbox-label"> 
+                      <span>Tablet</span>
+                    </label>
+                </li>
               </div>
                <div class="device-color">
-                <h>COLOR</h>
-                <li> <input type="checkbox"class="device-checkbox-input"  id="black" >
-                <label for="black" class="device-checkbox-label"><span>Black</span></label></li>
-                <li><input type="checkbox"class="device-checkbox-input"  id="red">
-                <label for="red" class="device-checkbox-label"><span>Red</span></label></li>
-                <li><input type="checkbox" class="device-checkbox-input" id="green">
-                <label for="green" class="device-checkbox-label"><span>Green</span></label></li>
-                <li><input type="checkbox" class="device-checkbox-input" id="blue">
-                  <label for="blue" class="device-checkbox-label"><span>Blue</span></label></li>
-                  <li><input type="checkbox" class="device-checkbox-input" id="orange">
-                    <label for="orange" class="device-checkbox-label"><span>Orange</span></label></li>
-               </div>
-               <div class="device-ram">
-                <h>RAM</h>
-                <li><input type="checkbox" class="device-checkbox-input"  id="1gb">
-                <label for="1gb" class="device-checkbox-label"><span>1GB</span></label></li>
-                <li><input type="checkbox" class="device-checkbox-input"  id="2gb">
-                <label for="2gb" class="device-checkbox-label"><span>2GB</span></label></li>
-                <li><input type="checkbox" class="device-checkbox-input" id="4gb">
-                <label for="4gb" class="device-checkbox-label"><span>4GB</span></label></li>
-                <li><input type="checkbox" class="device-checkbox-input" id="6gb">
-                <label for="6gb" class="device-checkbox-label"><span>6GB</span></label></li>
-                <li><input type="checkbox" class="device-checkbox-input" id="8gb">
-                <label for="8gb" class="device-checkbox-label"><span>8GB</span></label></li>
+                 <h>COLOR</h>
+                 <li>
+                   <input type="checkbox"class="device-checkbox-input"  id="black" >
+                   <label for="black" class="device-checkbox-label">
+                     <span>Black</span>
+                   </label>
+                 </li>
+                 <li>
+                   <input type="checkbox"class="device-checkbox-input"  id="red">
+                   <label for="red" class="device-checkbox-label">
+                     <span>Red</span>
+                   </label>
+                 </li>
+                 <li>
+                   <input type="checkbox" class="device-checkbox-input" id="green">
+                   <label for="green" class="device-checkbox-label">
+                    <span>Green</span>
+                    </label>
+                 </li>
+                 <li>
+                   <input type="checkbox" class="device-checkbox-input" id="blue">
+                   <label for="blue" class="device-checkbox-label">
+                    <span>Blue</span>
+                   </label>
+                 </li>
+                 <li>
+                   <input type="checkbox" class="device-checkbox-input" id="orange">
+                   <label for="orange" class="device-checkbox-label">
+                    <span>Orange</span>
+                   </label>
+                 </li>
+                </div>
+                <div class="device-ram">
+                 <h>RAM</h>
+                 <li> 
+                  <input type="checkbox" class="device-checkbox-input"  id="1gb">
+                   <label for="1gb" class="device-checkbox-label">
+                    <span>1GB</span>
+                   </label>
+                 </li>
+                 <li>
+                   <input type="checkbox" class="device-checkbox-input"  id="2gb">
+                   <label for="2gb" class="device-checkbox-label">
+                    <span>2GB</span>
+                   </label>
+                 </li>
+                 <li>
+                   <input type="checkbox" class="device-checkbox-input" id="4gb">
+                   <label for="4gb" class="device-checkbox-label">
+                    <span>4GB</span>
+                   </label>
+                 </li>
+                 <li>
+                   <input type="checkbox" class="device-checkbox-input" id="6gb">
+                   <label for="6gb" class="device-checkbox-label">
+                    <span>6GB</span>
+                   </label>
+                 </li>
+                 <li>
+                   <input type="checkbox" class="device-checkbox-input" id="8gb">
+                   <label for="8gb" class="device-checkbox-label">
+                    <span>8GB</span>
+                   </label>
+                 </li>
+                </div>
+                <div class="device-more-options">Show more options ...</div>
+                <button class="device-sumbit">SUMBIT</button>
               </div>
-              <div class="device-more-options">Show more options ...</div>
-              <button class="device-sumbit">SUMBIT</button>
-            </div>
           </aside>
 
 
@@ -149,7 +198,7 @@
                 <div class="table">
                   <div class="picture"><img src="images/tv.png" alt="Fake-shop">
                   <div class="picture1"></div>
-                  <div class="picture2"></div>
+                  <div class="picture2" id="picture-one"></div>
                   </div>
                   <ul class=" picture-tab ">
                   <li class="big"># 1 Device Name</li>
@@ -305,7 +354,18 @@
                </div>
               </div>
               
-
+              <div  class="form-auth"> 
+                <div class="btn-wrap">
+                    <div class="btn-close"></div>
+                </div>
+                <div class="form-field">
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-field">
+                    <input type="password" placeholder="Your password">
+                </div>
+                <button class="btn-submit">Send</button>
+              </div>
 
 
 
@@ -319,6 +379,7 @@
 
 
 
-    <footer class="footer">Footer</footer>
+    <footer class="footer">Footer</footer> 
+    <script src="app.js"></script>
   </body>
 </html>
