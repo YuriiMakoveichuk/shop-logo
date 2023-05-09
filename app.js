@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use strict";
 
 let productsCountEl = document.getElementById("products-count");
@@ -12,18 +11,6 @@ addToCartBtns.forEach((item) => {
     productsCountEl.textContent = +productsCountEl.textContent + 1;
   });
 });
-
-let pictureOne = document.getElementsById("#picture-one");
-console.log(pictureOne);
-
-function changeUrl() {
-  if ((pictureOne.style.background = url("images/heart.png"))) {
-    pictureOne.style.background = url("images/heart-white.png");
-  } else {
-    pictureOne.style.background = url("images/heart.png");
-  }
-}
-document.querySelector("#picture-one").addEventListener("click", changeUrl);
 
 let formAuth = document.querySelector(".form-auth");
 console.log(formAuth);
@@ -48,6 +35,15 @@ function btnCloseBtn() {
   }
 }
 document.querySelector(".btn-close").addEventListener("click", btnCloseBtn);
-=======
 
->>>>>>> 47a35a9f373bb6b341bce3eee5ff6fab98310569
+let pictureOne = document.getElementsById("#picture-one");
+console.log(pictureOne);
+
+function changeUrl() {
+  if ((pictureOne.style.background = url("images/heart.png"))) {
+    pictureOne.style.background = url("images/heart-white.png");
+  } else {
+    pictureOne.style.background = url("images/heart.png");
+  }
+}
+document.querySelector("#picture-one").addEventListener("click", changeUrl);
