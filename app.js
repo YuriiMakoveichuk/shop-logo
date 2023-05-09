@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 let productsCountEl = document.getElementById("products-count");
@@ -47,3 +48,6 @@ function btnCloseBtn() {
   }
 }
 document.querySelector(".btn-close").addEventListener("click", btnCloseBtn);
+=======
+
+>>>>>>> 47a35a9f373bb6b341bce3eee5ff6fab98310569
