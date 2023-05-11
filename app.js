@@ -12,38 +12,68 @@ addToCartBtns.forEach((item) => {
   });
 });
 
-let formAuth = document.querySelector(".form-auth");
-console.log(formAuth);
+// let formAuth = document.querySelector(".form-auth");
+// console.log(formAuth);
 
-let moreDetails = document.querySelectorAll(".price-btn");
-console.log(moreDetails);
+// let moreDetails = document.querySelectorAll(".price-btn");
+// console.log(moreDetails);
+
+// let btnClose = document.querySelector(".btn-close");
+// console.log(btnClose);
+
+// moreDetails.forEach((item) => {
+//   item.addEventListener("click", function () {
+//     if ((formAuth.style.display = "none")) {
+//       formAuth.style.display = "block";
+//     }
+//   });
+// });
+
+// function btnCloseBtn() {
+//   if ((formAuth.style.display = "block")) {
+//     formAuth.style.display = "none";
+//   }
+// }
+// document.querySelector(".btn-close").addEventListener("click", btnCloseBtn);
+
+let pictureLike = document.querySelectorAll(".picture2");
+console.log(pictureLike);
+
+pictureLike.forEach((item) => {
+  item.addEventListener("click", function () {
+    item.classList.toggle("liked");
+  });
+});
+
+let modal = document.querySelector(".form-auth");
+console.log(modal);
+let moreDetailsBtns = document.querySelectorAll(".price-btn");
+console.log(moreDetailsBtns);
+
+moreDetailsBtns.forEach((item) => {
+  item.addEventListener("click", openModal);
+});
+function openModal() {
+  modal.classList.add("show");
+  modal.classList.remove("hide");
+}
 
 let btnClose = document.querySelector(".btn-close");
 console.log(btnClose);
 
-moreDetails.forEach((item) => {
-  item.addEventListener("click", function () {
-    if ((formAuth.style.display = "none")) {
-      formAuth.style.display = "block";
-    }
-  });
+function closenModal() {
+  modal.classList.remove("show");
+  modal.classList.add("hide");
+}
+
+btnClose.addEventListener("click", closenModal);
+
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    closenModal();
+  }
 });
 
-function btnCloseBtn() {
-  if ((formAuth.style.display = "block")) {
-    formAuth.style.display = "none";
-  }
-}
-document.querySelector(".btn-close").addEventListener("click", btnCloseBtn);
-
-let pictureOne = document.getElementsById("#picture-one");
-console.log(pictureOne);
-
-function changeUrl() {
-  if ((pictureOne.style.background = url("images/heart.png"))) {
-    pictureOne.style.background = url("images/heart-white.png");
-  } else {
-    pictureOne.style.background = url("images/heart.png");
-  }
-}
-document.querySelector("#picture-one").addEventListener("click", changeUrl);
+$(".slider").slick({
+  dots: true,
+});
