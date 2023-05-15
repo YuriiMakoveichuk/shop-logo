@@ -12,30 +12,6 @@ addToCartBtns.forEach((item) => {
   });
 });
 
-// let formAuth = document.querySelector(".form-auth");
-// console.log(formAuth);
-
-// let moreDetails = document.querySelectorAll(".price-btn");
-// console.log(moreDetails);
-
-// let btnClose = document.querySelector(".btn-close");
-// console.log(btnClose);
-
-// moreDetails.forEach((item) => {
-//   item.addEventListener("click", function () {
-//     if ((formAuth.style.display = "none")) {
-//       formAuth.style.display = "block";
-//     }
-//   });
-// });
-
-// function btnCloseBtn() {
-//   if ((formAuth.style.display = "block")) {
-//     formAuth.style.display = "none";
-//   }
-// }
-// document.querySelector(".btn-close").addEventListener("click", btnCloseBtn);
-
 let pictureLike = document.querySelectorAll(".picture2");
 console.log(pictureLike);
 
@@ -59,7 +35,7 @@ function openModal() {
 }
 
 let btnClose = document.querySelector(".btn-close");
-console.log(btnClose);
+// console.log(btnClose);
 
 function closenModal() {
   modal.classList.remove("show");
@@ -77,3 +53,55 @@ modal.addEventListener("click", function (e) {
 $(".slider").slick({
   dots: true,
 });
+
+function Counter(incrementBtn, decrementBtn, inputField) {
+  this.domRefs = {
+    incrementBtn: document.querySelectorAll(".increment-button"),
+    decrementBtn: document.querySelectorAll(".decrement-button"),
+    inputField: document.querySelectorAll(".product-quantity input"),
+  };
+
+  // this.toggleButtonState = function () {
+  //   let count = +this.domRefs.inputField.value;
+
+  //   this.domRefs.decrementBtn.disabled = count <= 1;
+  //   this.domRefs.incrementBtn.disabled = count >= 10;
+  // };
+  // this.toggleButtonState();
+
+  this.increment = function () {
+    if (this.domRefs.inputField.value <= 1) {
+      this.domRefs.inputField.value = +this.domRefs.inputField.value + 1;
+      // this.toggleButtonState();
+    }
+  };
+  this.decrement = function () {
+    if (this.domRefs.inputField.value >= 10) {
+      this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
+      // this.toggleButtonState();
+    }
+  };
+  this.domRefs.incrementBtn.forEach((total) => {
+    total.addEventListener("click", this.increment.bind(this));
+  });
+
+  this.domRefs.decrementBtn.forEach((total) => {
+    total.addEventListener("click", this.decrement.bind(this));
+  });
+
+  // this.domRefs.incrementBtn.addEventListener(
+  //   "click",
+  //   this.increment.bind(this)
+  // );
+  // this.domRefs.decrementBtn.addEventListener(
+  //   "click",
+  //   this.decrement.bind(this)
+  // );
+}
+
+let counter = new Counter(
+  document.querySelectorAll(".increment-button")[0],
+  document.querySelectorAll(".decrement-button")[0],
+  document.querySelectorAll(".product-quantity input")[0]
+);
+console.log(counter);
